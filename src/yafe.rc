@@ -1,0 +1,391 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,9,9,0
+ PRODUCTVERSION 0,9,9,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "Yet Another Fractal Explorer"
+            VALUE "FileVersion", "0, 9, 9, 0"
+            VALUE "InternalName", "yafe"
+            VALUE "LegalCopyright", "Copyright (C) Alex Pankratov, 2003-2011"
+            VALUE "OriginalFilename", "yafe.exe"
+            VALUE "ProductName", "Yet Another Fractal Explorer"
+            VALUE "ProductVersion", "0, 9, 9, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Canada) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENC)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_CAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAIN DIALOGEX 0, 0, 286, 225
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Yet Another Fractal Explorer"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_PROXY,"Static",SS_BLACKFRAME | SS_NOTIFY,5,5,220,215
+    CONTROL         "5",IDC_HISTORY_UP,"Button",BS_OWNERDRAW | WS_TABSTOP,230,5,50,10
+    CONTROL         "6",IDC_HISTORY_DOWN,"Button",BS_OWNERDRAW | WS_TABSTOP,230,210,50,10
+    CONTROL         "",IDC_HISTORY,"Static",SS_BLACKFRAME | SS_NOTIFY,230,16,50,193
+END
+
+IDD_FRACTAL_L DIALOG  0, 0, 192, 61
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Fractal parameters"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Please specify Lyapunov's fractal &oscillator sequence",IDC_STATIC,7,5,168,8
+    COMBOBOX        IDC_SEQ,5,20,180,55,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Create",IDOK,70,40,50,14
+END
+
+IDD_ABOUT DIALOGEX 0, 0, 177, 86
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Yafe"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,10,10,21,20
+    CTEXT           "Yet Another Fractal Explorer",IDC_STATIC,40,10,124,20,SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,5,40,165,1
+    LTEXT           "Version",IDC_STATIC,10,50,24,8
+    LTEXT           ":   0.9.9",IDC_STATIC,45,50,25,8
+    LTEXT           "Copyright",IDC_STATIC,10,60,30,8
+    LTEXT           ":   Alex Pankratov, 2003 - 2011",IDC_STATIC,45,60,120,8
+    LTEXT           "License",IDC_STATIC,10,70,26,8
+    LTEXT           ":   BSD License",IDC_STATIC,45,70,50,8
+END
+
+IDD_GOTO DIALOG  0, 0, 197, 81
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Exact fractal area"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_X1,25,20,80,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_X2,110,20,80,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Y1,25,40,80,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Y2,110,40,80,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&Render",IDOK,74,60,50,14
+    LTEXT           "Please specify X and Y ranges of the area to be rendered",IDC_STATIC,10,5,181,8
+    LTEXT           "&X",IDC_STATIC,10,22,8,8
+    LTEXT           "&Y",IDC_STATIC,10,42,8,8
+    PUSHBUTTON      ">>",IDC_OPTIONS,170,60,20,14
+END
+
+IDD_RENDER_TO_FILE DIALOG  0, 0, 192, 41
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Rendering"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Cancel",IDCANCEL,71,20,50,14
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",0x1,5,5,180,9
+END
+
+IDD_RTF_OPTIONS DIALOG  0, 0, 192, 66
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Render To File"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&File name:",IDC_STATIC,5,7,33,8
+    EDITTEXT        IDC_FILENAME,51,5,115,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,171,5,15,13
+    LTEXT           "&Dimension:",IDC_STATIC,5,22,36,8
+    EDITTEXT        IDC_IMAGE_SIZE,51,20,40,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "pixels",IDC_STATIC,95,22,18,8
+    LTEXT           "",IDC_FILESIZE,121,22,65,8
+    DEFPUSHBUTTON   "&Render",IDOK,71,45,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 279
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 218
+    END
+
+    IDD_FRACTAL_L, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 185
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 54
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 170
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 78
+    END
+
+    IDD_GOTO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 190
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 74
+    END
+
+    IDD_RENDER_TO_FILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 185
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 34
+    END
+
+    IDD_RTF_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 185
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 59
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\yafe.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\yafe.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_POPUP MENU 
+BEGIN
+    POPUP "ImageArea"
+    BEGIN
+        POPUP "&Fractal"
+        BEGIN
+            MENUITEM "&Lyapunov",                   ID_FRACTAL_L
+            MENUITEM "&Mandelbrot",                 ID_FRACTAL_M
+            MENUITEM "&Newton",                     ID_FRACTAL_N
+        END
+        POPUP "&Quality"
+        BEGIN
+            MENUITEM "&Draft",                      ID_QUALITY_DRAFT
+            MENUITEM "&Normal",                     ID_QUALITY_NORMAL
+            MENUITEM "&High",                       ID_QUALITY_HIGH
+            MENUITEM SEPARATOR
+            MENUITEM "&Antialias",                  ID_ANTIALIAS
+        END
+        POPUP "&Palette"
+        BEGIN
+            MENUITEM "&Default",                    ID_PALETTE_DEFAULT
+            MENUITEM SEPARATOR
+            MENUITEM "&Import ..",                  ID_PALETTE_IMPORT
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Coordinates ..",             ID_GOTO
+        MENUITEM SEPARATOR
+        MENUITEM "&Render",                     ID_RENDER
+        MENUITEM "Render to &file ..",          ID_SAVE_IMAGE
+        MENUITEM SEPARATOR
+        MENUITEM "&About ..",                   ID_ABOUT
+    END
+    POPUP "GotoOptions"
+    BEGIN
+        POPUP "&Expand by"
+        BEGIN
+            MENUITEM "5%",                          ID_GOTO_EXP_5
+            MENUITEM "10%",                         ID_GOTO_EXP_10
+            MENUITEM "20%",                         ID_GOTO_EXP_20
+            MENUITEM "50%",                         ID_GOTO_EXP_50
+        END
+        POPUP "&Contract by"
+        BEGIN
+            MENUITEM "5%",                          ID_GOTO_CON_5
+            MENUITEM "10%",                         ID_GOTO_CON_10
+            MENUITEM "20%",                         ID_GOTO_CON_20
+            MENUITEM "50%",                         ID_GOTO_CON_50
+        END
+        POPUP "&Fix aspect ratio"
+        BEGIN
+            MENUITEM "&Adjust shortest range",      ID_GOTO_ASPECT_MIN
+            MENUITEM SEPARATOR
+            MENUITEM "Adjust &X range",             ID_GOTO_ASPECT_X
+            MENUITEM "Adjust &Y range",             ID_GOTO_ASPECT_Y
+        END
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_FRACTAL_L DLGINIT
+BEGIN
+    IDC_SEQ, 0x403, 6, 0
+0x6262, 0x6261, 0x0061, 
+    IDC_SEQ, 0x403, 3, 0
+0x6162, "\000" 
+    IDC_SEQ, 0x403, 8, 0
+0x6262, 0x6261, 0x6261, 0x0061, 
+    IDC_SEQ, 0x403, 13, 0
+0x6262, 0x6262, 0x6262, 0x6161, 0x6161, 0x6161, "\000" 
+    IDC_SEQ, 0x403, 11, 0
+0x6162, 0x6162, 0x6161, 0x6262, 0x6261, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_E_SAVE_IMAGE_AS     "Failed to save rendered image in specified file."
+    IDS_E_IMPORT_PALETTE_MAP 
+                            "Failed to import Fractint palette from the specified file."
+    IDS_E_GOTO_SSCANF       "The format of the value is invalid."
+    IDS_E_GOTO_EMPTY        "Please specify the value of the coordinate."
+    IDS_E_RTF_FILENAME      "Please specify the name of the image file."
+    IDS_E_RTF_FILE          "Failed to create specified output file."
+END
+
+#endif    // English (Canada) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\yafe.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
