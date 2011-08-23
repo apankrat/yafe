@@ -15,7 +15,8 @@
 
 +----------------------------------------------------------+
 
-   Project file for Visual Studio 2005 and up is in /build
+   /bin    - prebuilt yafe.exe (compressed with upx 3.07)
+   /build  - the project file for Visual Studio 2005
+   /src    - miscellaneous stuff
    
-   Prebuilt yafe.exe is in /bin (compressed with upx 3.07)
-
++----------------------------------------------------------+
