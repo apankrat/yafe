@@ -391,10 +391,11 @@ LRESULT CDialogMain::OnPictureRClick(WPARAM x, LPARAM y)
   case eQualityDraft:  cmd = ID_QUALITY_DRAFT; break;
   case eQualityNormal: cmd = ID_QUALITY_NORMAL; break;
   case eQualityHigh:   cmd = ID_QUALITY_HIGH; break;
+  case eQualityUltra:  cmd = ID_QUALITY_ULTRA; break;
   default: cmd = 0;
   }
 
-  popup->CheckMenuRadioItem(ID_QUALITY_DRAFT, ID_QUALITY_HIGH, cmd, MF_BYCOMMAND);
+  popup->CheckMenuRadioItem(ID_QUALITY_DRAFT, ID_QUALITY_ULTRA, cmd, MF_BYCOMMAND);
 
   //
   if (m_bAntialias)
@@ -477,6 +478,11 @@ LRESULT CDialogMain::OnPictureRClick(WPARAM x, LPARAM y)
 
   case ID_QUALITY_HIGH:
     m_pFractal->SetQuality(eQualityHigh);
+    Render();
+    break;
+
+  case ID_QUALITY_ULTRA:
+    m_pFractal->SetQuality(eQualityUltra);
     Render();
     break;
 

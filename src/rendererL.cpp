@@ -46,9 +46,9 @@ struct CFractalLyapunov : CFractal
 };
 
 //
-#define ABS_LESS(v, limit) ((-(limit) < (v)) && ((v) < (limit)))
-#define ABS_MORE(v, limit) (((v) < -(limit)) || ((limit) < (v)))
-#define ABS(v)             (((v) < 0) ? -(v) : (v))
+#define ABS(v)               (((v) < 0) ? -(v) : (v))
+#define ABS_LESS(v, limit)   (ABS(v) < (limit))
+#define ABS_MORE(v, limit)   (ABS(v) > (limit))
 
 //
 // Calculator
@@ -136,6 +136,7 @@ void CFractalLyapunov::Render(CRenderCallback * cb)
   case eQualityDraft:  n_main = 50; break;
   case eQualityNormal: n_main = 500; break;
   case eQualityHigh:   n_main = 5000; break;
+  case eQualityUltra:  n_main = 10000; break;
   default:
     assert(0);
     return;
@@ -169,7 +170,7 @@ void CFractalLyapunov::Render(CRenderCallback * cb)
   for (y=h, b=bounds.y2; y>0; y--, b-=db)
   {
     uint x;
-    _double log_b = log(ABS(b));
+    _double nb_log_b = nb*log(ABS(b));
 
     if (full)
       line -= w;
@@ -212,8 +213,8 @@ void CFractalLyapunov::Render(CRenderCallback * cb)
         f *= r*(1-f);
         t *= (1-f-f);
 
-        if (ABS_LESS(t, 1e-10) ||
-            ABS_MORE(t, 1e+10))
+        if (ABS_LESS(t, 1e-8) ||
+            ABS_MORE(t, 1e+8))
         { 
           if (ta_idx < ta_max)
           { 
@@ -222,7 +223,7 @@ void CFractalLyapunov::Render(CRenderCallback * cb)
         }
       }
 
-      _double res = log(ABS(t)) + na*log(ABS(a)) + nb*log_b;
+      _double res = log(ABS(t)) + na*log(ABS(a)) + nb_log_b;
 
       for (i=0; i<ta_idx; i++)
         res += log(ABS(ta[i]));

@@ -30,7 +30,8 @@ enum EQuality
 
   eQualityDraft,
   eQualityNormal,
-  eQualityHigh
+  eQualityHigh,
+  eQualityUltra
 };
 
 //

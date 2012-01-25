@@ -45,9 +45,9 @@ struct CFractalNewton : CFractal
 };
 
 //
-#define ABS_LESS(v, limit) ((-(limit) < (v)) && ((v) < (limit)))
-#define ABS_MORE(v, limit) (((v) < -(limit)) && ((limit) < (v)))
-#define ABS(v)             (((v) < 0) ? -(v) : (v))
+#define ABS(v)               (((v) < 0) ? -(v) : (v))
+#define ABS_LESS(v, limit)   (ABS(v) < (limit))
+#define ABS_MORE(v, limit)   (ABS(v) > (limit))
 
 
 //
@@ -120,7 +120,8 @@ void CFractalNewton::Render(CRenderCallback * cb)
   {
   case eQualityDraft:  n_main = 64; break;
   case eQualityNormal: n_main = 128; break;
-  case eQualityHigh:   n_main = 512; break;
+  case eQualityHigh:   n_main = 256; break;
+  case eQualityUltra:  n_main = 512; break;
   default:
     assert(0);
     return;

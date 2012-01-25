@@ -1,5 +1,5 @@
 //{{NO_DEPENDENCIES}}
-// Microsoft Developer Studio generated include file.
+// Microsoft Visual C++ generated include file.
 // Used by yafe.rc
 //
 #define IDS_E_SAVE_IMAGE_AS             1
@@ -37,33 +37,34 @@
 #define ID_QUALITY_DRAFT                32774
 #define ID_QUALITY_NORMAL               32775
 #define ID_QUALITY_HIGH                 32776
-#define ID_SAVE_IMAGE                   32777
-#define ID_FRACTAL_L                    32778
-#define ID_FRACTAL_M                    32779
-#define ID_ANTIALIAS                    32780
-#define ID_ABOUT                        32781
-#define ID_PALETTE_DEFAULT              32782
-#define ID_PALETTE_IMPORT               32783
-#define ID_FRACTAL_N                    32784
-#define ID_GOTO                         32785
-#define ID_GOTO_EXP_5                   32786
-#define ID_GOTO_EXP_10                  32787
-#define ID_GOTO_EXP_20                  32788
-#define ID_GOTO_EXP_50                  32789
-#define ID_GOTO_CON_5                   32790
-#define ID_GOTO_CON_10                  32791
-#define ID_GOTO_CON_20                  32792
-#define ID_GOTO_CON_50                  32793
-#define ID_GOTO_ASPECT_X                32794
-#define ID_GOTO_ASPECT_Y                32795
-#define ID_GOTO_ASPECT_MIN              32796
+#define ID_QUALITY_ULTRA                32777
+#define ID_SAVE_IMAGE                   32778
+#define ID_FRACTAL_L                    32779
+#define ID_FRACTAL_M                    32780
+#define ID_ANTIALIAS                    32781
+#define ID_ABOUT                        32782
+#define ID_PALETTE_DEFAULT              32783
+#define ID_PALETTE_IMPORT               32784
+#define ID_FRACTAL_N                    32785
+#define ID_GOTO                         32786
+#define ID_GOTO_EXP_5                   32787
+#define ID_GOTO_EXP_10                  32788
+#define ID_GOTO_EXP_20                  32789
+#define ID_GOTO_EXP_50                  32790
+#define ID_GOTO_CON_5                   32791
+#define ID_GOTO_CON_10                  32792
+#define ID_GOTO_CON_20                  32793
+#define ID_GOTO_CON_50                  32794
+#define ID_GOTO_ASPECT_X                32795
+#define ID_GOTO_ASPECT_Y                32796
+#define ID_GOTO_ASPECT_MIN              32797
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        136
-#define _APS_NEXT_COMMAND_VALUE         32797
+#define _APS_NEXT_COMMAND_VALUE         32798
 #define _APS_NEXT_CONTROL_VALUE         1039
 #define _APS_NEXT_SYMED_VALUE           101
 #endif

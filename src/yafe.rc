@@ -281,6 +281,7 @@ BEGIN
             MENUITEM "&Draft",                      ID_QUALITY_DRAFT
             MENUITEM "&Normal",                     ID_QUALITY_NORMAL
             MENUITEM "&High",                       ID_QUALITY_HIGH
+            MENUITEM "&Ultra",                      ID_QUALITY_ULTRA
             MENUITEM SEPARATOR
             MENUITEM "&Antialias",                  ID_ANTIALIAS
         END

@@ -105,6 +105,7 @@ void CFractalMandelbrot::Render(CRenderCallback * cb)
   case eQualityDraft:  n_main = 128; break;
   case eQualityNormal: n_main = 1024; break;
   case eQualityHigh:   n_main = 4096; break;
+  case eQualityUltra:  n_main = 8192; break;
   default:
     assert(0);
     return;
